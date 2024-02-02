@@ -31,31 +31,20 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
       super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       body: Container(
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.blue, Colors.purple],
-           begin: Alignment.topRight,
-           end: Alignment.bottomLeft,
-          )
-         ),
-         child: const Column(
+       backgroundColor: Color (0xFFF55722), 
+       body: Center( 
+        child: Column( 
           mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-          Icon(
-          Icons.edit,
-          size:80,
-          color: Colors.white,
-         ),
-         SizedBox(height: 20),
-
-             ] )
-       )
-    );
-    
+          children: [
+            Image.asset("assets/image/Quicloc8-logo.png", height: 130,),
+            const SizedBox(height: 30,),
+        ],
+        ),
+      )
+   );
   }
 }
